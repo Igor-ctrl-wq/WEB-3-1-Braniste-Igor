@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Republica Moldova, Norvegia și Suedia — Recapitulare HTML</title>
+<style>
+  :root{
+    --paper:#F3EEE2;
+    --ink:#1C2B39;
+    --line:#C9BFA8;
+    --gold:#B6862C;
+    --moldova-blue:#0046AE;
+    --moldova-yellow:#FFD200;
+    --moldova-red:#CC092F;
+    --norway-red:#BA0C2F;
+    --norway-white:#FFFFFF;
+    --norway-blue:#00205B;
+    --sweden-blue:#006AA7;
+    --sweden-yellow:#FECC02;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height:1.55;
+  }
+
+  a { color: var(--norway-blue); }
+  a:visited { color: var(--norway-blue); }
+
+  .site-header{
+    padding: 2.2rem 1.5rem 1.6rem;
+    border-bottom: 3px solid var(--ink);
+    text-align:center;
+  }
+
+  .site-header .eyebrow{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    color:var(--gold);
+    margin:0 0 0.4rem;
+  }
+
+  .site-header h1{
+    margin:0;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight:700;
+  }
+
+  .site-header p.subtitle{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    max-width: 640px;
+    margin: 0.8rem auto 0;
+    color:#4A5A68;
+    font-size:0.95rem;
+  }
+
+  nav.main-menu{
+    background: var(--ink);
+    padding: 0.7rem 1rem;
+  }
+
+  nav.main-menu ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap: 1.8rem;
+    margin:0;
+    padding:0;
+  }
+
+  nav.main-menu a{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    color: var(--paper);
+    text-decoration:none;
+    font-size:0.92rem;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+  }
+
+  nav.main-menu a:hover{
+    border-bottom-color: var(--gold);
+  }
+
+  main{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .country-section{
+    border: 1px solid var(--line);
+    background: #FBF9F3;
+    padding: 1.8rem;
+    margin-bottom: 2.5rem;
+    scroll-margin-top: 1rem;
+  }
+
+  .country-section h2{
+    margin-top:0;
+    font-size:1.6rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.4rem;
+  }
+
+  .country-layout{
+    display:flex;
+    gap: 2rem;
+    flex-wrap:wrap;
+    align-items:flex-start;
+  }
+
+  .country-text{
+    flex: 1 1 280px;
+    min-width: 260px;
+  }
+
+  .country-media{
+    flex: 0 0 250px;
+  }
+
+  .country-media img{
+    width:100%;
+    height:auto;
+    border: 1px solid var(--line);
+    display:block;
+    margin-bottom: 0.8rem;
+  }
+
+  figcaption{
+    font-family:'Trebuchet MS', Helvetica, sans-serif;
+    font-size:0.78rem;
+    color:#6B7A88;
+    text-align:center;
+  }
+
+  .flag-table{
+    border-collapse: collapse;
+    border: 1px solid var(--ink);
+  }
+
+  .flag-table td{
+    padding:0;
+    border: none;
+  }
+
+  ul, ol, dl{
+    font-family:'Trebuchet MS', Helvetica, sans-serif;
+    font-size:0.95rem;
+  }
+
+  dt{ font-weight:bold; margin-top:0.5rem; }
+  dd{ margin-left:1rem; color:#3F4E5C; }
+
+  .external-link{
+    display:inline-block;
+    margin-top:0.6rem;
+    font-family:'Trebuchet MS', Helvetica, sans-serif;
+    font-size:0.88rem;
+  }
+
+  .back-to-top{
+    display:block;
+    margin-top:1.2rem;
+    font-family:'Trebuchet MS', Helvetica, sans-serif;
+    font-size:0.8rem;
+    color:var(--gold);
+    text-decoration:none;
+  }
+  .back-to-top:hover{ text-decoration:underline; }
+
+  .compare-section{
+    margin-bottom:2.5rem;
+  }
+
+  .compare-section h2{
+    font-size:1.5rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom:0.4rem;
+  }
+
+  table.compare{
+    width:100%;
+    border-collapse: collapse;
+    font-family:'Trebuchet MS', Helvetica, sans-serif;
+    font-size:0.9rem;
+  }
+
+  table.compare caption{
+    text-align:left;
+    font-weight:bold;
+    padding-bottom:0.5rem;
+  }
+
+  table.compare th, table.compare td{
+    border: 1px solid var(--line);
+    padding: 0.55rem 0.7rem;
+    text-align:left;
+  }
+
+  table.compare thead th{
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  table.compare .table-title{
+    background: var(--gold);
+    color: var(--ink);
+    text-align:center;
+    font-weight:bold;
+  }
+
+  .site-footer{
+    border-top: 3px solid var(--ink);
+    padding: 1.6rem 1.5rem;
+    text-align:center;
+    font-family:'Trebuchet MS', Helvetica, sans-serif;
+    font-size:0.85rem;
+    color:#5A6975;
+  }
+</style>
+</head>
+<body id="top">
+
+<header class="site-header">
+  <p class="eyebrow">Recapitulare HTML — Laborator 2 DAW</p>
+  <h1>Trei țări, trei povești: Moldova, Norvegia și Suedia</h1>
+  <p class="subtitle">O pagină de recapitulare care adună liste, tabele, steaguri construite din celule și legături interne și externe pentru fiecare țară.</p>
+</header>
+
+<nav class="main-menu">
+  <ul>
+    <li><a href="#moldova">Partea 1 — Republica Moldova</a></li>
+    <li><a href="#norvegia">Partea 2 — Norvegia</a></li>
+    <li><a href="#suedia">Partea 3 — Suedia</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ======================= REPUBLICA MOLDOVA ======================= -->
+  <section id="moldova" class="country-section" aria-labelledby="moldova-title">
+    <article>
+      <h2 id="moldova-title">Republica Moldova</h2>
+      <div class="country-layout">
+        <div class="country-text">
+          <p>Țară situată în sud-estul Europei, între România și Ucraina, Republica Moldova este cunoscută pentru podgoriile sale întinse, mănăstirile săpate în stâncă și centrul istoric al Chișinăului.</p>
+
+          <h3>Obiective turistice</h3>
+          <ul>
+            <li>Orheiul Vechi</li>
+            <li>Cetatea Soroca</li>
+            <li>Cricova</li>
+            <li>Mănăstirea Căpriana</li>
+            <li>Castel Mimi</li>
+          </ul>
+
+          <p class="external-link">
+            Citește mai multe despre Republica Moldova pe
+            <a href="https://ro.wikipedia.org/wiki/Republica_Moldova" target="_blank" rel="noopener">Wikipedia</a>.
+          </p>
+        </div>
+
+        <div class="country-media">
+          <figure>
+            <img src="https://placehold.co/400x260/1C2B39/F3EEE2?text=Chi%C8%99in%C4%83u" alt="Vedere generică a orașului Chișinău, capitala Republicii Moldova">
+            <figcaption>Chișinău, capitala Republicii Moldova</figcaption>
+          </figure>
+
+          <!-- steag Moldova construit din tabel cu trei coloane egale, raport 1:2 (240x120px) -->
+          <table class="flag-table" width="240" height="120" style="table-layout:fixed;" role="img" aria-label="Steagul Republicii Moldova: tricolor vertical albastru, galben, roșu">
+            <tr>
+              <td width="80" height="120" style="background:var(--moldova-blue); width:80px; height:120px;">&nbsp;</td>
+              <td width="80" height="120" style="background:var(--moldova-yellow); width:80px; height:120px;">&nbsp;</td>
+              <td width="80" height="120" style="background:var(--moldova-red); width:80px; height:120px;">&nbsp;</td>
+            </tr>
+          </table>
+          <figcaption>Steagul Republicii Moldova (realizat cu &lt;table&gt;, raport 1:2)</figcaption>
+        </div>
+      </div>
+
+      <a class="back-to-top" href="#top">↑ Înapoi sus</a>
+    </article>
+  </section>
+
+  <!-- ======================= NORVEGIA ======================= -->
+  <section id="norvegia" class="country-section" aria-labelledby="norvegia-title">
+    <article>
+      <h2 id="norvegia-title">Norvegia</h2>
+      <div class="country-layout">
+        <div class="country-text">
+          <p>Norvegia este o țară scandinavă renumită pentru fiordurile spectaculoase, luminile nordice și un stil de viață apropiat de natură, chiar și în orașele mari precum Oslo sau Bergen.</p>
+
+          <h3>Activități pentru turiști</h3>
+          <ol start="3">
+            <li>Croazieră pe Geirangerfjord</li>
+            <li>Drumeție pe Preikestolen (Stânca Amvonului)</li>
+            <li>Vizitarea muzeelor din Oslo (Muzeul Corăbiilor Viking)</li>
+            <li>Observarea aurorei boreale în Tromsø</li>
+            <li>Plimbare cu trenul Flåm printre munți</li>
+          </ol>
+
+          <p class="external-link">
+            Detalii suplimentare despre Norvegia pe
+            <a href="https://ro.wikipedia.org/wiki/Norvegia" target="_blank" rel="noopener">Wikipedia</a>.
+          </p>
+        </div>
+
+        <div class="country-media">
+          <figure>
+            <img src="https://placehold.co/400x260/BA0C2F/FFFFFF?text=Fiorduri+Norvegia" alt="Ilustrație generică a unui fiord norvegian">
+            <figcaption>Fiord tipic pentru peisajul norvegian</figcaption>
+          </figure>
+
+          <!-- steag Norvegia construit din tabel: grilă 5x5 cu dimensiuni fixe (220x160px), cruce decalată spre hampă -->
+          <table class="flag-table" width="220" height="160" style="table-layout:fixed;">
+            <tr>
+              <td width="60" height="60" style="background:var(--norway-red); width:60px; height:60px;"></td>
+              <td width="10" height="60" style="background:var(--norway-white); width:10px; height:60px;"></td>
+              <td width="20" height="60" style="background:var(--norway-blue); width:20px; height:60px;"></td>
+              <td width="10" height="60" style="background:var(--norway-white); width:10px; height:60px;"></td>
+              <td width="120" height="60" style="background:var(--norway-red); width:120px; height:60px;"></td>
+            </tr>
+            <tr>
+              <td width="60" height="10" style="background:var(--norway-white); width:60px; height:10px;"></td>
+              <td width="10" height="10" style="background:var(--norway-white); width:10px; height:10px;"></td>
+              <td width="20" height="10" style="background:var(--norway-blue); width:20px; height:10px;"></td>
+              <td width="10" height="10" style="background:var(--norway-white); width:10px; height:10px;"></td>
+              <td width="120" height="10" style="background:var(--norway-white); width:120px; height:10px;"></td>
+            </tr>
+            <tr>
+              <td colspan="5" width="220" height="20" style="background:var(--norway-blue); width:220px; height:20px;"></td>
+            </tr>
+            <tr>
+              <td width="60" height="10" style="background:var(--norway-white); width:60px; height:10px;"></td>
+              <td width="10" height="10" style="background:var(--norway-white); width:10px; height:10px;"></td>
+              <td width="20" height="10" style="background:var(--norway-blue); width:20px; height:10px;"></td>
+              <td width="10" height="10" style="background:var(--norway-white); width:10px; height:10px;"></td>
+              <td width="120" height="10" style="background:var(--norway-white); width:120px; height:10px;"></td>
+            </tr>
+            <tr>
+              <td width="60" height="60" style="background:var(--norway-red); width:60px; height:60px;"></td>
+              <td width="10" height="60" style="background:var(--norway-white); width:10px; height:60px;"></td>
+              <td width="20" height="60" style="background:var(--norway-blue); width:20px; height:60px;"></td>
+              <td width="10" height="60" style="background:var(--norway-white); width:10px; height:60px;"></td>
+              <td width="120" height="60" style="background:var(--norway-red); width:120px; height:60px;"></td>
+            </tr>
+          </table>
+          <figcaption>Steagul Norvegiei (realizat cu &lt;table&gt;, cruce decalată spre hampă)</figcaption>
+        </div>
+      </div>
+
+      <a class="back-to-top" href="#top">↑ Înapoi sus</a>
+    </article>
+  </section>
+
+  <!-- ======================= SUEDIA ======================= -->
+  <section id="suedia" class="country-section" aria-labelledby="suedia-title">
+    <article>
+      <h2 id="suedia-title">Suedia</h2>
+      <div class="country-layout">
+        <div class="country-text">
+          <p>Suedia este cea mai întinsă țară nordică, cunoscută pentru designul minimalist, arhipelagul din jurul Stockholmului și pădurile nesfârșite din nord.</p>
+
+          <h3>Termeni asociați Suediei</h3>
+          <dl>
+            <dt>Stockholm</dt>
+            <dd>Capitala Suediei, construită pe 14 insule legate prin peste 50 de poduri.</dd>
+
+            <dt>IKEA</dt>
+            <dd>Companie suedeză de mobilă și decorațiuni, cunoscută în toată lumea.</dd>
+
+            <dt>Volvo</dt>
+            <dd>Producător suedez de automobile, fondat la Göteborg în 1927.</dd>
+
+            <dt>ABBA</dt>
+            <dd>Formație pop suedeză, câștigătoare a Eurovisionului în 1974 cu piesa „Waterloo”.</dd>
+          </dl>
+
+          <p class="external-link">
+            Mai multe informații despre Suedia pe
+            <a href="https://ro.wikipedia.org/wiki/Suedia" target="_blank" rel="noopener">Wikipedia</a>.
+          </p>
+        </div>
+
+        <div class="country-media">
+          <figure>
+            <img src="https://placehold.co/400x260/006AA7/FECC02?text=Stockholm" alt="Ilustrație generică a orașului Stockholm, capitala Suediei">
+            <figcaption>Stockholm, capitala Suediei</figcaption>
+          </figure>
+
+          <!-- steag Suedia construit din tabel: grilă 3x3 cu dimensiuni fixe (240x150px), cruce galbenă decalată spre hampă -->
+          <table class="flag-table" width="240" height="150" style="table-layout:fixed;">
+            <tr>
+              <td width="60" height="60" style="background:var(--sweden-blue); width:60px; height:60px;"></td>
+              <td width="30" height="60" style="background:var(--sweden-yellow); width:30px; height:60px;"></td>
+              <td width="150" height="60" style="background:var(--sweden-blue); width:150px; height:60px;"></td>
+            </tr>
+            <tr>
+              <td colspan="3" width="240" height="30" style="background:var(--sweden-yellow); width:240px; height:30px;"></td>
+            </tr>
+            <tr>
+              <td width="60" height="60" style="background:var(--sweden-blue); width:60px; height:60px;"></td>
+              <td width="30" height="60" style="background:var(--sweden-yellow); width:30px; height:60px;"></td>
+              <td width="150" height="60" style="background:var(--sweden-blue); width:150px; height:60px;"></td>
+            </tr>
+          </table>
+          <figcaption>Steagul Suediei (realizat cu &lt;table&gt;, cruce decalată spre hampă, raport 5:8)</figcaption>
+        </div>
+      </div>
+
+      <a class="back-to-top" href="#top">↑ Înapoi sus</a>
+    </article>
+  </section>
+
+  <!-- ======================= TABEL COMPARATIV ======================= -->
+  <section class="compare-section" aria-labelledby="compare-title">
+    <h2 id="compare-title">Tabel comparativ</h2>
+    <table class="compare">
+      <caption class="visually-hidden">Comparație generală între Republica Moldova, Norvegia și Suedia</caption>
+      <thead>
+        <tr>
+          <th colspan="5" class="table-title">Informații comparative — Moldova, Norvegia, Suedia</th>
+        </tr>
+        <tr>
+          <th>Țară</th>
+          <th>Capitală</th>
+          <th>Populație (aprox.)</th>
+          <th>Limbă oficială</th>
+          <th>Monedă</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Republica Moldova</td>
+          <td>Chișinău</td>
+          <td>2,4 milioane</td>
+          <td>Română</td>
+          <td>Leu moldovenesc (MDL)</td>
+        </tr>
+        <tr>
+          <td>Norvegia</td>
+          <td>Oslo</td>
+          <td>5,5 milioane</td>
+          <td>Norvegiană</td>
+          <td>Coroană norvegiană (NOK)</td>
+        </tr>
+        <tr>
+          <td>Suedia</td>
+          <td>Stockholm</td>
+          <td>10,5 milioane</td>
+          <td>Suedeză</td>
+          <td>Coroană suedeză (SEK)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Laborator 2 — DAW · Recapitulare HTML · Realizat pentru prezentarea Republicii Moldova, Norvegiei și Suediei.</p>
+</footer>
+
+</body>
+</html>
