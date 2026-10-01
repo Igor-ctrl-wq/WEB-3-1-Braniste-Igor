@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Piatra, Hârtia, Foarfeca</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 60px; }
+        button { padding: 10px 20px; margin: 5px; font-size: 16px; cursor: pointer; }
+        .alegeri { font-size: 48px; margin: 20px 0; }
+        #result { font-weight: bold; font-size: 20px; transition: color 0.2s; }
+        .win { color: green; }
+        .lose { color: red; }
+        .draw { color: #b8860b; }
+    </style>
+</head>
+<body>
+    <h1>Piatra, Hârtia, Foarfeca</h1>
+
+    <div class="buttons">
+        <button id="piatra">🪨 Piatra</button>
+        <button id="hartia">📄 Hârtia</button>
+        <button id="foarfeca">✂️ Foarfeca</button>
+    </div>
+
+    <div class="alegeri">
+        <span id="userEmoji">❔</span> vs <span id="computerEmoji">❔</span>
+    </div>
+
+    <p>Tu: <span id="userChoice">-</span> | Calculator: <span id="computerChoice">-</span></p>
+    <p id="result">Alege o variantă pentru a începe.</p>
+    <p>Scor — Tu: <span id="playerScore">0</span> | Calculator: <span id="computerScore">0</span> | Egalități: <span id="drawScore">0</span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
