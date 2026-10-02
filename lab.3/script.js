@@ -1,3 +1,23 @@
+function calculateSum(a, b) {
+    return a + b;
+  }
+  
+  console.log(calculateSum(3, 5));
+  console.log(calculateSum(-2, 10));
+  
+  const student = {
+    name: "Igor",
+    age: 18,
+    grade: 8,
+    introduce() {
+      console.log(`Sunt ${this.name} si am ${this.age} ani.`);
+    }
+  };
+  
+  student.introduce();
+  student.grade = 10;
+  console.log(student.grade);
+
 const optiuni = ["piatra", "hartia", "foarfeca"];
 const emoji = { piatra: "🪨", hartia: "📄", foarfeca: "✂️" };
 
@@ -24,7 +44,7 @@ function stabilesteCastigator(user, computer) {
         return "player";
     }
     return "computer";
-}
+}  
 
 function joacaRunda(userChoice) {
     const computerChoice = alegeCalculator();
