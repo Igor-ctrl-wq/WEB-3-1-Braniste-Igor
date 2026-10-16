@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Laborator 4 - Array în JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Laborator 4 – Liste și metodele Array</h1>
+
+  <div class="sectiune">
+    <h2>Lista de cumpărături</h2>
+
+    <input type="text" id="produsInput" placeholder="Introdu un produs">
+    <button onclick="adaugaLaSfarsit()">Adaugă la sfârșit</button>
+    <button onclick="adaugaLaInceput()">Adaugă la început</button>
+    <button onclick="stergePrimul()">Șterge primul</button>
+    <button onclick="stergeUltimul()">Șterge ultimul</button>
+
+    <p id="listaProduse"></p>
+  </div>
+
+  <div class="sectiune">
+    <h2>CATALOG ELECTRONIC</h2>
+    <p id="numarElevi"></p>
+    <div id="catalog"></div>
+
+    <h3>Adaugă elev</h3>
+    Nume: <input type="text" id="numeElev"><br>
+    Vârsta: <input type="number" id="varstaElev"><br>
+    Nota: <input type="number" id="notaElev"><br>
+    <button onclick="adaugaElev()">Adaugă elev</button>
+
+    <h3>Șterge elev</h3>
+    Numele elevului: <input type="text" id="numeSters">
+    <button onclick="stergeElev()">Șterge elev</button>
+
+    <h3>Caută elev</h3>
+    Caută elev: <input type="text" id="numeCautat">
+    <button onclick="cautaElev()">Caută</button>
+    <p id="rezultatCautare"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
